@@ -14,9 +14,3 @@ export async function POST(req: NextRequest) {
   const data = await response.json();
   return NextResponse.json(data);
 }
-```
-
-5. Press **⌘ + S** to save
-6. Go to Terminal and run:
-```
-git add . && git commit -m "fix route" && git push

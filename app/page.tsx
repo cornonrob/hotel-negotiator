@@ -139,7 +139,7 @@ export default function HotelNegotiator() {
         )}
 
         <div style={{ padding:"16px 24px 32px", borderTop:"1px solid rgba(201,168,76,0.1)", background:"rgba(12,10,8,0.8)", display:"flex", gap:"12px", alignItems:"flex-end" }}>
-          <textarea value={input} onChange={e=>setInput(e.target.value)} onKeyDown={handleKey} placeholder="Tell Victoria about your stay…" rows={1} style={{ flex:1, background:"rgba(255,255,255,0.03)", border:"1px solid rgba(201,168,76,0.2)", color:"#e8dcc8", padding:"14px 18px", fontFamily:"'Cormorant Garamond',serif", fontSize:"15px", resize:"none", outline:"none", lineHeight:"1.5" }} onInput={e=>{e.target.style.height="auto";e.target.style.height=Math.min(e.target.scrollHeight,120)+"px";}}/>
+          <textarea value={input} onChange={e=>setInput(e.target.value)} onKeyDown={handleKey} placeholder="Tell Victoria about your stay…" rows={1} style={{ flex:1, background:"rgba(255,255,255,0.03)", border:"1px solid rgba(201,168,76,0.2)", color:"#e8dcc8", padding:"14px 18px", fontFamily:"'Cormorant Garamond',serif", fontSize:"15px", resize:"none", outline:"none", lineHeight:"1.5" }} onInput={e=>{const t=e.target as HTMLTextAreaElement;t.style.height="auto";t.style.height=Math.min(t.scrollHeight,120)+"px";}}/>
           <button onClick={()=>sendMessage()} disabled={!input.trim()||loading} style={{ width:"48px", height:"48px", background:input.trim()&&!loading?"linear-gradient(135deg,#c9a84c,#a07830)":"rgba(201,168,76,0.1)", border:"none", cursor:"pointer", color:input.trim()&&!loading?"#0c0a08":"#4a3d28", fontSize:"18px" }}>→</button>
         </div>
       </div>

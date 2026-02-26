@@ -86,7 +86,7 @@ export default function HotelNegotiator() {
     setLoading(false);
   };
 
-  const handleKey = (e) => {
+  const handleKey = (e: React.KeyboardEvent) => {
     if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); sendMessage(); }
   };
 

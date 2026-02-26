@@ -58,7 +58,7 @@ export default function HotelNegotiator() {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
-  const sendMessage = async (text) => {
+  const sendMessage = async (text?: string) => {
     const userText = text || input.trim();
     if (!userText) return;
     setInput("");
